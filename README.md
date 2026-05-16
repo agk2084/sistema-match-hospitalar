@@ -9,7 +9,7 @@ Desenvolver um sistema capaz de recomendar o profissional de saúde mais adequad
 ## Tecnologias
 - Java
 - Programação Orientada a Objetos
-- PlantUML
+- Astah* UML
 
 ## Funcionalidades
 - Leitura de profissionais via CSV
