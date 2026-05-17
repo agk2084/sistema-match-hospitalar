@@ -2,18 +2,31 @@ package model;
 
 public class Paciente {
     
-    /*
-     Atributos da classe Paciente
+    /**
+    * Classe que representa um paciente no sistema
     */
+
+    // =========================
+    // Atributos da classe
+    // =========================   
     int idade;
     int prioridade;
     String especialidadeNecessaria;
     String localizacao;
     String sintoma;
 
-    /*
-     Construtor de classe Paciente
-    */
+    // =========================
+    // Construtor da classe
+    // =========================
+
+    /**
+     * Cria um paciente com seus respectivos dados
+     * @param idade                         => idade do paciente
+     * @param prioridade                    => prioridade (nível) do paciente de acordo com sua infermidade
+     * @param especialidadeNecessaria       => especialidade médica necessária relacionada as queixas
+     * @param localizacao                   => localização do paciente/ ala que se encontra
+     * @param sintoma                       => sintoma (da enfermidade) do paciente
+     */
     public Paciente(int idade, int prioridade, String especialidadeNecessaria, String localizacao, String sintoma) {
         this.idade = idade;
         this.prioridade = prioridade;
@@ -22,9 +35,15 @@ public class Paciente {
         this.sintoma = sintoma;
     }
 
-    /*
-     getters 
-    */
+    // =========================
+    // Getters da classe
+    // =========================
+
+    /**
+     * Retorna a idade do paciente
+     * @return
+     */
+
     public int getIdade() {
         return idade;
     }
@@ -44,4 +63,24 @@ public class Paciente {
     public String getSintoma() {
         return sintoma;
     }
+
+    // =========================
+    // Métodos sobrescritos
+    // =========================
+
+    @Override
+    public String toString() {
+        return "Paciente{" +
+                "idade=" + idade +
+                ", prioridade=" + prioridade +
+                ", especialidadeNecessaria='" + especialidadeNecessaria + '\'' +
+                ", localizacao='" + localizacao + '\'' +
+                ", sintoma='" + sintoma + '\'' +
+                '}';
+    } 
+    /**
+     * and code
+     */
 }
+
+
