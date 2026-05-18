@@ -2,7 +2,7 @@ package model;
 
 public class Profissional {
     /**
-    * Classe que representa um paciente no sistema
+    * Classe que representa um Profissional no sistema
     */
 
     // =========================
@@ -31,6 +31,7 @@ public class Profissional {
     // =========================
     // Getters da classe
     // =========================
+    
     public String getNome() {
         return nome;
     }
