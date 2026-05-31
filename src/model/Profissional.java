@@ -8,18 +8,19 @@ public class Profissional {
     // =========================
     // Atributos da classe
     // =========================
-    String nome;
-    String especialidade;
-    int capacidade;
-    int experiencia;
-    boolean disponibilidade;
-    String localizacao;
+    private String nome;
+    private String especialidade;
+    private int capacidade;
+    private int experiencia;
+    private boolean disponibilidade;
+    private String localizacao;
 
     // =========================
     // Construtor da classe
     // =========================
-    public Profissional(String nome, String especialidade, int capacidade, int experiencia, boolean disponibilidade,
-            String localizacao) {
+    public Profissional(String nome, String especialidade, int capacidade, 
+            int experiencia, boolean disponibilidade, String localizacao) {
+        
         this.nome = nome;
         this.especialidade = especialidade;
         this.capacidade = capacidade;
@@ -70,7 +71,4 @@ public class Profissional {
                 ", localizacao='" + localizacao + '\'' +
                 '}';
     }  
-    /**
-     * and code
-     */
 }

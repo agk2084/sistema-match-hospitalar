@@ -9,11 +9,11 @@ public class Paciente {
     // =========================
     // Atributos da classe
     // =========================   
-    int idade;
-    int prioridade;
-    String especialidadeNecessaria;
-    String localizacao;
-    String sintoma;
+    private int idade;
+    private int prioridade;
+    private String especialidadeNecessaria;
+    private String localizacao;
+    private String sintoma;
 
     // =========================
     // Construtor da classe
@@ -22,7 +22,7 @@ public class Paciente {
     /**
      * Cria um paciente com seus respectivos dados
      * @param idade                         => idade do paciente
-     * @param prioridade                    => prioridade (nível) do paciente de acordo com sua infermidade
+     * @param prioridade                    => prioridade (nível) do paciente de acordo com sua enfermidade
      * @param especialidadeNecessaria       => especialidade médica necessária relacionada as queixas
      * @param localizacao                   => localização do paciente/ ala que se encontra
      * @param sintoma                       => sintoma (da enfermidade) do paciente
@@ -41,7 +41,7 @@ public class Paciente {
 
     /**
      * Retorna a idade do paciente
-     * @return
+     * @return prioridade
      */
 
     public int getIdade() {
@@ -78,9 +78,6 @@ public class Paciente {
                 ", sintoma='" + sintoma + '\'' +
                 '}';
     } 
-    /**
-     * and code
-     */
 }
 
 

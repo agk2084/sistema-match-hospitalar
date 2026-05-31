@@ -2,23 +2,24 @@ package model;
 
 public class ResultadoMatch {
 
-    // =========================
-    // Atributos da classe
-    // =========================
+    /**
+     * Class attributes
+     */
     private Profissional profissional;
     private double distancia;
 
-    // =========================
-    // Construtor da classe
-    // =========================
+    /**
+     * Class constructor
+     */
     public ResultadoMatch(Profissional profissional, double distancia) {
         this.profissional = profissional;
         this.distancia = distancia;
     }
 
-    // =========================
-    // Getters
-    // =========================
+    /**
+     * getters 
+     * @return
+     */
     public Profissional getProfissional() {
         return profissional;
     }
@@ -37,4 +38,7 @@ public class ResultadoMatch {
                 ", distancia=" + distancia +
                 '}';
     }
+    /**
+     * and code
+     */
 }

@@ -1,0 +1,6 @@
+Cardiologia
+Ortopedia
+Clinico Geral
+Neurologia
+Pediatria
+Dermatologia

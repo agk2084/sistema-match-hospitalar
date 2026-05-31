@@ -10,6 +10,7 @@ import java.util.List;
 
 public class LeitorArquivo {
 
+    // Lê os profissionais do arquivo CSV
     public List<Profissional> lerProfissionais(String caminho) {
 
         List<Profissional> profissionais = new ArrayList<>();
@@ -18,7 +19,7 @@ public class LeitorArquivo {
 
             String linha;
 
-            // Ignora cabeçalho
+            // Ignora o cabeçalho
             br.readLine();
 
             while ((linha = br.readLine()) != null) {
@@ -40,14 +41,35 @@ public class LeitorArquivo {
                         disponibilidade,
                         localizacao
                 );
-
                 profissionais.add(profissional);
             }
 
         } catch (IOException e) {
-            System.out.println("Erro ao ler arquivo: " + e.getMessage());
+            System.out.println("Erro ao ler profissionais: " + e.getMessage());
+        }
+        return profissionais;
+    }
+
+    // Lê as especialidades do arquivo TXT
+    public List<String> lerEspecialidades(String caminho) {
+
+        List<String> especialidades = new ArrayList<>();
+
+        try (BufferedReader br = new BufferedReader(new FileReader(caminho))) {
+
+            String linha;
+
+            while ((linha = br.readLine()) != null) {
+
+                if (!linha.isBlank()) {
+                    especialidades.add(linha);
+                }
+            }
+
+        } catch (IOException e) {
+            System.out.println("Erro ao ler especialidades: " + e.getMessage());
         }
 
-        return profissionais;
+        return especialidades;
     }
 }
