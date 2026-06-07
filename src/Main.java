@@ -11,7 +11,6 @@ public class Main {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-        //csdsa
 
         LeitorArquivo leitor = new LeitorArquivo();
 
@@ -145,13 +144,38 @@ public class Main {
 
         for (Profissional profissional : profissionais) {
 
+            System.out.println("\n--------------------------------");
+
             System.out.println(
-                    profissional.getNome()
-                            + " | "
-                            + profissional.getEspecialidade()
-                            + " | Disponível: "
-                            + profissional.isDisponibilidade()
+                    "Nome: "
+                    + profissional.getNome()
+            );
+
+            System.out.println(
+                    "Especialidade: "
+                    + profissional.getEspecialidade()
+            );
+
+            System.out.println(
+                    "Capacidade: "
+                    + profissional.getCapacidade()
+            );
+
+            System.out.println(
+                    "Experiência: "
+                    + profissional.getExperiencia()
+            );
+
+            System.out.println(
+                    "Disponibilidade: "
+                    + profissional.isDisponibilidade()
+            );
+
+            System.out.println(
+                    "Localização: "
+                    + profissional.getLocalizacao()
             );
         }
+        System.out.println("\n--------------------------------");
     }
 }

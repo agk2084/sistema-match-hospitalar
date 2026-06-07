@@ -18,6 +18,17 @@ public class Profissional {
     // =========================
     // Construtor da classe
     // =========================
+
+    /**
+     * Cria um profissional com seus respectivos dados.
+     *
+     * @param nome nome do profissional
+     * @param especialidade especialidade médica
+     * @param capacidade nível de capacidade de atendimento
+     * @param experiencia nível de experiência profissional
+     * @param disponibilidade disponibilidade para atendimento
+     * @param localizacao localização atual do profissional
+    */
     public Profissional(String nome, String especialidade, int capacidade, 
             int experiencia, boolean disponibilidade, String localizacao) {
         

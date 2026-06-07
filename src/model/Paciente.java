@@ -40,13 +40,18 @@ public class Paciente {
     // =========================
 
     /**
-     * Retorna a idade do paciente
-     * @return prioridade
-     */
+     * Retorna a idade do paciente.
+     * @return idade do paciente
+    */
 
     public int getIdade() {
         return idade;
     }
+
+    /**
+     * Retorna a prioridade do paciente.
+     * @return prioridade do paciente
+    */
 
     public int getPrioridade() {
         return prioridade;

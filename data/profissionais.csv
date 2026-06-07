@@ -1,5 +1,10 @@
-nome,especialidade,capacidade,experiencia,disponibilidade,localização
-Dr. João,Cardiologista,3,3,true,Emergencia
+nome,especialidade,capacidade,experiencia,disponibilidade,localizacao
+Dr. João,Cardiologia,3,3,true,Emergencia
+Dra. Fernanda,Cardiologia,2,3,true,Ala A
+Dr. Carlos,Cardiologia,3,2,true,Ala B
 Dra. Maria,Clinico Geral,2,2,true,Ala A
-Dr. Pedro,Ortopedista,1,1,false,Ala B
-Dra. Ana,Neurologista,3,2,true,Emergencia
+Dr. Marcos,Clinico Geral,3,3,true,Emergencia
+Dr. Pedro,Ortopedia,1,1,false,Ala B
+Dra. Juliana,Ortopedia,3,2,true,Ala C
+Dra. Ana,Neurologia,3,2,true,Emergencia
+Dr. Ricardo,Neurologia,2,3,true,Ala A
