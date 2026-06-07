@@ -119,18 +119,39 @@ public class Main {
         System.out.println("Sintoma: " + sintoma);
 
         if (melhor != null) {
+
             System.out.println("\nProfissional recomendado:");
+            System.out.println("-------------------------");
+
             System.out.println("Nome: " + melhor.getNome());
+
             System.out.println("Especialidade: " + melhor.getEspecialidade());
 
+            System.out.println("Capacidade: " + melhor.getCapacidade());
+
+            System.out.println("Experiência: " + melhor.getExperiencia());
+
+            System.out.println("Localização: " + melhor.getLocalizacao());
+
         } else {
+
             System.out.println("\nNenhum profissional encontrado.");
         }
 
         System.out.println("\n===== RANKING =====");
 
+        int posicao = 1;
+
         for (ResultadoMatch resultado : ranking) {
-            System.out.printf("%s | Distância: %.2f%n",resultado.getProfissional().getNome(),resultado.getDistancia());
+
+            System.out.printf(
+                    "%dº Lugar - %s | Distância: %.2f%n",
+                    posicao,
+                    resultado.getProfissional().getNome(),
+                    resultado.getDistancia()
+            );
+
+            posicao++;
         }
     }
 
