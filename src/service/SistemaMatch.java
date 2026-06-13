@@ -46,7 +46,7 @@ public class SistemaMatch {
     // Converte idade em faixa numérica
     public int normalizarIdade(int idade) {
 
-        if (idade <= 25) {
+        if (idade <= 17) {
             return 1;
         }
 

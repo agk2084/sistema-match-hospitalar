@@ -8,9 +8,19 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Classe responsável pela leitura
+ * dos arquivos utilizados pelo sistema.
+ */
 public class LeitorArquivo {
 
-    // Lê os profissionais do arquivo CSV
+    /**
+     * Lê os profissionais cadastrados
+     * no arquivo CSV.
+     *
+     * @param caminho caminho do arquivo
+     * @return lista de profissionais
+     */
     public List<Profissional> lerProfissionais(String caminho) {
 
         List<Profissional> profissionais = new ArrayList<>();
@@ -23,6 +33,11 @@ public class LeitorArquivo {
             br.readLine();
 
             while ((linha = br.readLine()) != null) {
+
+                // Ignora linhas vazias
+                if (linha.isBlank()) {
+                    continue;
+                }
 
                 String[] dados = linha.split(",");
 
@@ -41,16 +56,24 @@ public class LeitorArquivo {
                         disponibilidade,
                         localizacao
                 );
+
                 profissionais.add(profissional);
             }
 
         } catch (IOException e) {
             System.out.println("Erro ao ler profissionais: " + e.getMessage());
         }
+
         return profissionais;
     }
 
-    // Lê as especialidades do arquivo TXT
+    /**
+     * Lê as especialidades disponíveis
+     * no arquivo TXT.
+     *
+     * @param caminho caminho do arquivo
+     * @return lista de especialidades
+     */
     public List<String> lerEspecialidades(String caminho) {
 
         List<String> especialidades = new ArrayList<>();
