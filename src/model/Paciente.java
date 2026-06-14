@@ -3,7 +3,7 @@ package model;
 public class Paciente {
     
     /**
-    * Classe que representa um paciente no sistema
+    * CLASSE QUE REPRESENTA UM PROFISSIONAL NO SISTEMA
     */
 
     // =========================
@@ -22,9 +22,9 @@ public class Paciente {
     /**
      * Cria um paciente com seus respectivos dados
      * @param idade                         => idade do paciente
-     * @param prioridade => nível de prioridade do paciente (1 = baixa, 2 = média, 3 = alta)
+     * @param prioridade                    => nível de prioridade do paciente (1 = baixa, 2 = média, 3 = alta)
      * @param especialidadeNecessaria       => especialidade médica necessária relacionada as queixas
-     * @param localizacao                   => localização do paciente/ ala que se encontra
+     * @param localizacao                   => setor onde o paciente se encontra
      * @param sintoma                       => sintoma (da enfermidade) do paciente
      */
     public Paciente(int idade, int prioridade, String especialidadeNecessaria, String localizacao, String sintoma) {
