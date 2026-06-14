@@ -3,7 +3,7 @@ package model;
 public class Profissional {
     /**
     * Classe que representa um Profissional no sistema
-    */
+    */ 
 
     // =========================
     // Atributos da classe
