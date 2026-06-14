@@ -29,8 +29,13 @@ public class Profissional {
      * @param disponibilidade disponibilidade para atendimento
      * @param localizacao localização atual do profissional
     */
-    public Profissional(String nome, String especialidade, int capacidade, 
-            int experiencia, boolean disponibilidade, String localizacao) {
+    public Profissional(
+            String nome, 
+            String especialidade, 
+            int capacidade, 
+            int experiencia, 
+            boolean disponibilidade, 
+            String localizacao) {
         
         this.nome = nome;
         this.especialidade = especialidade;

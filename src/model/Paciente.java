@@ -22,7 +22,7 @@ public class Paciente {
     /**
      * Cria um paciente com seus respectivos dados
      * @param idade                         => idade do paciente
-     * @param prioridade                    => prioridade (nível) do paciente de acordo com sua enfermidade
+     * @param prioridade => nível de prioridade do paciente (1 = baixa, 2 = média, 3 = alta)
      * @param especialidadeNecessaria       => especialidade médica necessária relacionada as queixas
      * @param localizacao                   => localização do paciente/ ala que se encontra
      * @param sintoma                       => sintoma (da enfermidade) do paciente
@@ -57,14 +57,26 @@ public class Paciente {
         return prioridade;
     }
 
+    /**
+     * Retorna a especialidade necessária para o paciente.
+     * @return especialidade necessária
+     */
     public String getEspecialidadeNecessaria() {
         return especialidadeNecessaria;
     }
 
+    /**
+     * Retorna a localização do paciente.
+     * @return localização do paciente
+     */
     public String getLocalizacao() {
         return localizacao;
     }
 
+    /**
+     * Retorna o sintoma informado.
+     * @return sintoma do paciente
+     */
     public String getSintoma() {
         return sintoma;
     }

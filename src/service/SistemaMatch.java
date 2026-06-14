@@ -36,16 +36,20 @@ public class SistemaMatch {
     public double calcularDistancia(Paciente paciente, Profissional profissional) {
 
         // Normaliza idade do paciente
-        int idadeNormalizada = normalizarIdade (paciente.getIdade());
+        int idadeNormalizada = normalizarIdade(paciente.getIdade());
 
-        // Fórmula da distância Euclidiana
-        double distancia = Math.sqrt(Math.pow (paciente.getPrioridade() - profissional.getCapacidade(), 2) + Math.pow (idadeNormalizada - profissional.getExperiencia(), 2));
+        // **** Fórmula da distância Euclidiana ****
+        double distancia = Math.sqrt(
+            Math.pow(paciente.getPrioridade() - profissional.getCapacidade(), 2) 
+            + 
+            Math.pow (idadeNormalizada - profissional.getExperiencia(), 2));
         return distancia;
     }
 
     // Converte idade em faixa numérica
-    public int normalizarIdade(int idade) {
+    private int normalizarIdade(int idade) {
 
+        // Criança e adolecente
         if (idade <= 17) {
             return 1;
         }
@@ -88,10 +92,10 @@ public class SistemaMatch {
         // Calcula distância de cada profissional
         for (Profissional profissional : filtrados) {
 
-            double distancia = calcularDistancia (paciente, profissional);
+            double distancia = calcularDistancia(paciente, profissional);
 
             // Aplica ajustes
-            distancia = aplicarAjustes (paciente, profissional, distancia);
+            distancia = aplicarAjustes(paciente, profissional, distancia);
 
             // Cria resultado do match
             ResultadoMatch resultado = new ResultadoMatch (profissional, distancia);

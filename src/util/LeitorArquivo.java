@@ -41,12 +41,12 @@ public class LeitorArquivo {
 
                 String[] dados = linha.split(",");
 
-                String nome = dados[0];
-                String especialidade = dados[1];
-                int capacidade = Integer.parseInt(dados[2]);
-                int experiencia = Integer.parseInt(dados[3]);
-                boolean disponibilidade = Boolean.parseBoolean(dados[4]);
-                String localizacao = dados[5];
+                String nome = dados[0].trim();
+                String especialidade = dados[1].trim();
+                int capacidade = Integer.parseInt(dados[2].trim());
+                int experiencia = Integer.parseInt(dados[3].trim());
+                boolean disponibilidade = Boolean.parseBoolean(dados[4].trim());
+                String localizacao = dados[5].trim();
 
                 Profissional profissional = new Profissional(
                         nome,
@@ -85,7 +85,7 @@ public class LeitorArquivo {
             while ((linha = br.readLine()) != null) {
 
                 if (!linha.isBlank()) {
-                    especialidades.add(linha);
+                    especialidades.add(linha.trim());
                 }
             }
 
