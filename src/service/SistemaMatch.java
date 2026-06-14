@@ -10,7 +10,9 @@ import java.util.List;
 
 public class SistemaMatch {
 
-    // Filtra profissionais compatíveis
+    /**
+     * FILTRO PROFISSIONAIS COMPATIVEIS
+     */
     public List<Profissional> filtrarProfissionais(Paciente paciente, List<Profissional> profissionais) {
 
         List<Profissional> filtrados = new ArrayList<>();
@@ -32,36 +34,64 @@ public class SistemaMatch {
         return filtrados;
     }
 
-    // Calcula a distância Euclidiana
+    /**
+     * CALCULA A DISTÂNCIA EUCLIDIANA
+     */
     public double calcularDistancia(Paciente paciente, Profissional profissional) {
 
         // Normaliza idade do paciente
         int idadeNormalizada = normalizarIdade(paciente.getIdade());
 
-        // **** Fórmula da distância Euclidiana ****
+        // Fórmula da distância Euclidiana e cálculo 
         double distancia = Math.sqrt(
-            Math.pow(paciente.getPrioridade() - profissional.getCapacidade(), 2) 
+            Math.pow
+                (paciente.getPrioridade() - profissional.getCapacidade(), 
+                2
+            ) 
             + 
-            Math.pow (idadeNormalizada - profissional.getExperiencia(), 2));
+            Math.pow 
+                (idadeNormalizada - profissional.getExperiencia(), 
+                2
+            )
+        );
         return distancia;
     }
 
-    // Converte idade em faixa numérica
+    /**
+     * CONVERTE IDADE EM FAIXA NUMÉRICA
+     * @param idade
+     * @return faixa etária normalizada 
+     * 
+     * 1 = criança/adolescente
+     * 2 = adulto
+     * 3 = idoso
+     */
     private int normalizarIdade(int idade) {
 
-        // Criança e adolecente
+        // Criança e adolescente
         if (idade <= 17) {
             return 1;
         }
 
+        // Adulto
         if (idade <= 59) {
             return 2;
         }
 
+        //Idoso
         return 3;
     }
 
-    // Aplica bônus de localização
+    /**
+     * Aplica um bônus de proximidade
+     * quando paciente e profissional
+     * estão no mesmo setor.
+     *
+     * @param paciente paciente avaliado
+     * @param profissional profissional avaliado
+     * @param distancia distância calculada
+     * @return distância ajustada
+     */
     public double aplicarAjustes(Paciente paciente, Profissional profissional, double distancia) {
 
         // Verifica se estão na mesma localização
@@ -80,7 +110,12 @@ public class SistemaMatch {
         return distancia;
     }
 
-    // Gera ranking dos profissionais
+    /**
+     * GERA RANKING DOS PROFISSIONAIS
+     * @param paciente
+     * @param profissionais
+     * @return
+     */
     public List<ResultadoMatch> gerarRanking(Paciente paciente, List<Profissional> profissionais) {
 
         List<ResultadoMatch> ranking = new ArrayList<>();
@@ -108,7 +143,11 @@ public class SistemaMatch {
         return ranking;
     }
 
-    // Retorna o melhor profissional
+    /**
+     * MELHOR PROFISSINAL
+     * @param ranking 
+     * @return melhor profissional
+     */
     public Profissional recomendarMelhor(List<ResultadoMatch> ranking) {
 
         // Verifica se ranking está vazio
