@@ -4,7 +4,17 @@ Dra. Fernanda,Cardiologia,2,3,true,Ala A
 Dr. Carlos,Cardiologia,3,2,true,Ala B
 Dra. Maria,Clinico Geral,2,2,true,Ala A
 Dr. Marcos,Clinico Geral,3,3,true,Emergencia
+Dra. Mariana,Clinico Geral,3,2,true,Ala B
 Dr. Pedro,Ortopedia,1,1,false,Ala B
 Dra. Juliana,Ortopedia,3,2,true,Ala C
+Dr. Marcelo,Ortopedia,2,3,true,Emergencia
 Dra. Ana,Neurologia,3,2,true,Emergencia
 Dr. Ricardo,Neurologia,2,3,true,Ala A
+Dra. Renata,Neurologia,3,3,true,Ala C
+Dra. Beatriz,Pediatria,3,2,true,Ala C
+Dr. Felipe,Pediatria,2,3,true,Emergencia
+Dra. Sofia,Pediatria,1,2,true,Ala A
+Dr. Eduardo,Pediatria,2,3,false,Ala B
+Dra. Camila,Dermatologia,2,2,true,Ala B
+Dr. Gustavo,Dermatologia,3,3,true,Ala A
+Dra. Helena,Dermatologia,1,3,true,Emergencia

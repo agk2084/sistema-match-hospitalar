@@ -1,6 +1,6 @@
-Cardiologia
-Ortopedia
 Clinico Geral
+Cardiologia
 Neurologia
+Ortopedia
 Pediatria
 Dermatologia

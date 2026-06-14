@@ -23,7 +23,7 @@ public class TelaPrincipal extends JFrame {
     public TelaPrincipal() {
 
         setTitle("Sistema de Triagem Hospitalar");
-        setSize(500, 600);
+        setSize(500, 700);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(null);
@@ -150,6 +150,8 @@ public class TelaPrincipal extends JFrame {
 
         areaResultado = new JTextArea();
 
+        areaResultado.setFont(new Font("Monospaced", Font.PLAIN, 11));
+
         areaResultado.setEditable(false);
 
         areaResultado.setLineWrap(true);
@@ -158,7 +160,7 @@ public class TelaPrincipal extends JFrame {
 
         JScrollPane scrollResultado = new JScrollPane(areaResultado);
 
-        scrollResultado.setBounds(20,360,440,170);
+        scrollResultado.setBounds(20,360,440,280);
 
         add(scrollResultado);
     }
@@ -220,7 +222,7 @@ public class TelaPrincipal extends JFrame {
                 mensagem.append("Prioridade: ").append(prioridadeSelecionada).append("\n");
                 mensagem.append("Especialidade: ").append(especialidade).append("\n");
                 mensagem.append("Setor: ").append(localizacao).append("\n");
-                mensagem.append("Sontoma: ").append(sintoma).append("\n\n");
+                mensagem.append("Sintoma: ").append(sintoma).append("\n\n");
 
                 mensagem.append("PROFISSIONAL RECOMENDADO\n");
                 mensagem.append("-------------------------\n\n");
@@ -253,9 +255,24 @@ public class TelaPrincipal extends JFrame {
                     JOptionPane.showMessageDialog(this,"Nenhum profissional encontrado.");
                 }
 
-                } catch (Exception e) {
-                    JOptionPane.showMessageDialog(this,"Preencha todos os campos corretamente.");
-            }
+        /**
+         * TESTEE
+         */        
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(
+                this,
+                "Preencha todos os campos corretamente."
+            );
+        }
+        // } catch (Exception e) {
+
+        //     e.printStackTrace();
+
+        //     JOptionPane.showMessageDialog(
+        //         this,
+        //         e.toString()
+        //     );
+        // }
     }
 
     /**
